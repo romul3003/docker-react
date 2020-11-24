@@ -1,11 +1,11 @@
 language: generic
 sudo: required
+# tell Travis we need a copy of docker running
 services:
-  # tell Travis we need a copy of docker running
   - docker
 
+# build an image using Dockerfile.dev
 before_install:
-  # build an image using Dockerfile.dev
   - docker build -t romul3003/docker-react -f Dockerfile.dev .
 
 # tell Travis how to run our test suite
